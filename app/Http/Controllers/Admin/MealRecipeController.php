@@ -189,9 +189,8 @@ class MealRecipeController extends Controller
         $requestData['yields'] = 4;
         $requestData['fiber'] = $fiber;
         $requestData['per_serving_calories'] = $perservingCalories;
-        $requestData['cooking_time_to'] = $request->cook_time + $request->prep_time;
+        $requestData['cook_time_to'] = $request->cook_time + $request->prep_time;
         $requestData['url_rewrite'] = Str::slug($request->name, '-');
-
         // return $requestData;
         
        $recipe =  MealRecipe::create($requestData);
@@ -322,6 +321,7 @@ class MealRecipeController extends Controller
         $requestData['fiber'] = $fiber;
         $requestData['per_serving_calories'] = $perservingCalories;
         $requestData['url_rewrite'] = Str::slug($request->name, '-');
+        $requestData['cook_time_to'] = $request->cook_time + $request->prep_time;
         
        $recipe =   $mealrecipe->update($requestData);
 
