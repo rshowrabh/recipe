@@ -134,7 +134,7 @@
 <div class="row">
     <div class="col-md-4 {{ $errors->has('festivals') ? 'has-error' : ''}}">
         <label for="festivals" class="control-label">{{ 'Festivals' }}</label>
-        <select multiple class="form-control" name="festivals" id="festivals">
+        <select multiple class="form-control" name="festivals[]" id="festivals">
             @foreach($mealFestivals as $mealFestival)
                 <option value="{{$mealFestival->id}}"
                         @if(isset($mealrecipe->festivals) && $mealrecipe->festivals == $mealFestival->id) selected @endif>{{$mealFestival->name}}</option>
@@ -146,7 +146,7 @@
 
     <div class="col-md-4 {{ $errors->has('tags') ? 'has-error' : ''}}">
         <label for="tags" class="control-label">{{ 'Tags' }}</label>
-        <select multiple class="form-control" name="tags" id="tags">
+        <select multiple class="form-control" name="tags[]" id="tags">
             @foreach($mealTags as $mealTags)
                 <option value="{{$mealTags->id}}"
                         @if(isset($mealrecipe->tags) && $mealrecipe->tags == $mealTags->id) selected @endif>{{$mealTags->name}}</option>

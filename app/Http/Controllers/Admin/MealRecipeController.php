@@ -34,6 +34,7 @@ class MealRecipeController extends Controller
      */
     public function index(Request $request)
     {
+        // dd(str_replace(['[',']','"'], '','["2","3"]'));
         $keyword = $request->get('search');
         $perPage = 25;
 
@@ -321,7 +322,12 @@ class MealRecipeController extends Controller
         $requestData['fiber'] = $fiber;
         $requestData['per_serving_calories'] = $perservingCalories;
         $requestData['url_rewrite'] = Str::slug($request->name, '-');
-        $requestData['cook_time_to'] = $request->cook_time + $request->prep_time;
+        $requestData['cook_time_to'] = $request->cook_time + $request->prep_time;      
+        $requestData['festivals'] = str_replace(['[',']','"'], '',json_encode($requestData['festivals']));
+        $requestData['tags'] = str_replace(['[',']','"'], '',json_encode($requestData['tags']));
+
+
+        // return $requestData;
         
        $recipe =   $mealrecipe->update($requestData);
 
