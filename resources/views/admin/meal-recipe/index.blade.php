@@ -109,7 +109,7 @@
                                         View
                                     </button>
                                 </a>
-                                @canany(['isEditor'])
+                                @canany(['isAdmin', 'isEditor'])
                                 <a href="{{ url('/admin/meal-recipe/' . $item->id . '/edit') }}"
                                    title="Edit MealRecipe">
                                     <button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"
