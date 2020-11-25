@@ -1,0 +1,39 @@
+php artisan crud:generate MealMeasurement --fields_from_file="resources/jsons/meal_measurements.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealIngredientCategory --fields_from_file="resources/jsons/meal_ingredient_categories.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealRecipeCategory --fields_from_file="resources/jsons/meal_recipe_categories.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealRecipeSubCategory --fields_from_file="resources/jsons/meal_recipe_sub_categories.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealRecipeSubSubCategory --fields_from_file="resources/jsons/meal_recipe_sub_sub_categories.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealCuisine --fields_from_file="resources/jsons/meal_cuisines.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealRegion --fields_from_file="resources/jsons/meal_regions.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealPrimaryDietType --fields_from_file="resources/jsons/meal_primary_diet_types.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealFestival --fields_from_file="resources/jsons/meal_festivals.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealDisease --fields_from_file="resources/jsons/meal_diseases.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealIngredient --fields_from_file="resources/jsons/meal_ingredients.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealVitaminMineral --fields_from_file="resources/jsons/meal_vitamins_minerals.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealSugar --fields_from_file="resources/jsons/meal_sugars.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealFat --fields_from_file="resources/jsons/meal_fats.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealIngredientMeasurement --fields_from_file="resources/jsons/meal_ingredient_measurements.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealTag --fields_from_file="resources/jsons/meal_tags.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealDishType --fields_from_file="resources/jsons/meal_dish_types.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealRecipe --fields_from_file="resources/jsons/meal_recipes.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealRecipeIngredient --fields_from_file="resources/jsons/meal_recipe_ingredients.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
+
+php artisan crud:generate MealRecipeTag --fields_from_file="resources/jsons/meal_recipe_tags.json" --view-path=admin --controller-namespace=App\\Http\\Controllers\\Admin --route-group=admin --form-helper=html
