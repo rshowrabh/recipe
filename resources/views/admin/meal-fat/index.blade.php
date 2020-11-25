@@ -61,11 +61,14 @@
                                         View
                                     </button>
                                 </a>
+                                @canany(['isAdmin','isEditor'])
                                 <a href="{{ url('/admin/meal-fat/' . $item->id . '/edit') }}" title="Edit MealFat">
                                     <button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"
                                                                               aria-hidden="true"></i> Edit
                                     </button>
                                 </a>
+                                @endcanany
+                                @canany(['isAdmin','isEditor'])
 
                                 <form method="POST" action="{{ url('/admin/meal-fat' . '/' . $item->id) }}"
                                       accept-charset="UTF-8" style="display:inline">
@@ -76,6 +79,7 @@
                                                 class="fa fa-trash-o" aria-hidden="true"></i> Delete
                                     </button>
                                 </form>
+                                @endcanany
                             </td>
                         </tr>
                     @endforeach
