@@ -34,7 +34,6 @@ class MealRecipeController extends Controller
      */
     public function index(Request $request)
     {
-        $this->authorize(['isAdmin']);
         $keyword = $request->get('search');
         $perPage = 25;
 
