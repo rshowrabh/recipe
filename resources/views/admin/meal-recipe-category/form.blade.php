@@ -19,8 +19,10 @@
 @can('isAdmin')
 <div class="form-group {{ $errors->has('approved') ? 'has-error' : ''}}">
     <label for="approved" class="control-label">{{ 'Approved' }}</label>
-    <input class="form-control" name="approved" type="number" id="approved"
-           value="{{ isset($mealrecipecategory->approved) ? $mealrecipecategory->approved : '0'}}">
+    <select class="form-control" name="approved" type="number" id="approved">
+        <option value='0' selected>No</option>
+        <option value='1'>Yes</option>
+    </select>
     {!! $errors->first('approved', '<p class="help-block">:message</p>') !!}
 </div>
 @endcan

@@ -208,6 +208,7 @@
         </select>    
         {!! $errors->first('main_dish', '<p class="help-block">:message</p>') !!}
     </div>
+@can('isAdmin')
     <div class="col-md-2 {{ $errors->has('approved') ? 'has-error' : ''}}">
         <label for="approved" class="control-label">{{ 'Approved' }}</label>
         <select class="form-control" name="approved" type="number" id="approved">
@@ -216,6 +217,7 @@
         </select>    
         {!! $errors->first('approved', '<p class="help-block">:message</p>') !!}
     </div>
+@endcan
     <div class="col-md-2 {{ $errors->has('recipe_origin') ? 'has-error' : ''}}">
         <label for="recipe_origin" class="control-label">{{ 'Recipe Origin' }}</label>
         <input class="form-control" name="recipe_origin" type="text" id="recipe_origin"

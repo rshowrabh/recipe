@@ -34,7 +34,7 @@ class MealRecipeController extends Controller
      */
     public function index(Request $request)
     {
-        // dd(str_replace(['[',']','"'], '','["2","3"]'));
+        $this->authorize(['isAdmin']);
         $keyword = $request->get('search');
         $perPage = 25;
 

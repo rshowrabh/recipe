@@ -273,12 +273,16 @@
              value="{{ isset($mealingredient->url_rewrite) ? $mealingredient->url_rewrite : ''}}">
       {!! $errors->first('url_rewrite', '<p class="help-block">:message</p>') !!}
   </div>
+  @can('isAdmin')
   <div class="col-md-3 {{ $errors->has('approved') ? 'has-error' : ''}}">
       <label for="approved" class="control-label">{{ 'Approved' }}</label>
-      <input class="form-control" name="approved" type="number" id="approved"
-             value="{{ isset($mealingredient->approved) ? $mealingredient->approved : ''}}">
+      <select class="form-control" name="approved" type="number" id="approved">
+        <option value='0' selected>No</option>
+        <option value='1'>Yes</option>
+      </select>  
       {!! $errors->first('approved', '<p class="help-block">:message</p>') !!}
   </div>
+  @endcan
   <div class="col-md-3 {{ $errors->has('created_by') ? 'has-error' : ''}}">
       <label for="created_by" class="control-label">{{ 'Created By' }}</label>
       <input class="form-control" name="created_by" type="text" id="created_by"

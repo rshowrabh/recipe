@@ -8,11 +8,16 @@
     <textarea class="form-control" rows="5" name="description" type="textarea" id="description" >{{ isset($mealtag->description) ? $mealtag->description : ''}}</textarea>
     {!! $errors->first('description', '<p class="help-block">:message</p>') !!}
 </div>
+@can('isAdmin')
 <div class="form-group {{ $errors->has('approved') ? 'has-error' : ''}}">
     <label for="approved" class="control-label">{{ 'Approved' }}</label>
-    <input class="form-control" name="approved" type="number" id="approved" value="{{ isset($mealtag->approved) ? $mealtag->approved : ''}}" >
+    <select class="form-control" name="approved" type="number" id="approved">
+        <option value="0" selected>No</option>
+        <option value="1" >Yes</option>
+    </select>    
     {!! $errors->first('approved', '<p class="help-block">:message</p>') !!}
 </div>
+@endcan
 <div class="form-group {{ $errors->has('color_code') ? 'has-error' : ''}}">
     <label for="color_code" class="control-label">{{ 'Color Code' }}</label>
     <input class="form-control" name="color_code" type="text" id="color_code" value="{{ isset($mealtag->color_code) ? $mealtag->color_code : ''}}" >
